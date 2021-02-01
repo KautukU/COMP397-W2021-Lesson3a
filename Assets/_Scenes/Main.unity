@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 77ec5d83ca7707c4fa48643bcc000206, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74d23e6b9bc763c4c9565c91b9cee0ab, type: 2}
     - target: {fileID: 919132149155446097, guid: 77ec5d83ca7707c4fa48643bcc000206, type: 3}
       propertyPath: m_Name
       value: tile (1)
@@ -661,7 +665,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  isGrounded: 0
   maxSpeed: 10
   gravity: -30
   jumpHeight: 3
@@ -671,6 +674,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   velocity: {x: 0, y: 0, z: 0}
+  isGrounded: 0
 --- !u!1001 &1712681467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -722,6 +726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 77ec5d83ca7707c4fa48643bcc000206, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74d23e6b9bc763c4c9565c91b9cee0ab, type: 2}
     - target: {fileID: 919132149155446097, guid: 77ec5d83ca7707c4fa48643bcc000206, type: 3}
       propertyPath: m_Name
       value: tile (3)
@@ -745,7 +753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5120078557471209186, guid: 843d351ad202c5d4ba9804978f517220, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.29
+      value: 4.85
       objectReference: {fileID: 0}
     - target: {fileID: 5120078557471209186, guid: 843d351ad202c5d4ba9804978f517220, type: 3}
       propertyPath: m_LocalRotation.x

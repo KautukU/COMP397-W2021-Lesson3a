@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public CharacterController controller;
 
-    public bool isGrounded = false;
+    public CharacterController controller;
 
     public float maxSpeed = 10.0f;
     public float gravity = -30.0f;
@@ -17,6 +16,7 @@ public class PlayerBehaviour : MonoBehaviour
     public LayerMask groundMask;
 
     public Vector3 velocity;
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +24,13 @@ public class PlayerBehaviour : MonoBehaviour
         controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame - once every 16.6666ms
+
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundRadius, groundMask);
-        
-        if(isGrounded && velocity.y < 0)
+
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2.0f;
         }
@@ -41,7 +42,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         controller.Move(move * maxSpeed * Time.deltaTime);
 
-        if(Input.GetButton("Jump") && isGrounded)
+        if (Input.GetButton("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
         }
